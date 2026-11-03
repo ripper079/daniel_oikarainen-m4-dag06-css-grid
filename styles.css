@@ -243,15 +243,24 @@ article .pris {
 }
 
 #om-oss h2 {
-  grid-column: 1 / -1;   /* Kantlinjer */
+  grid-column: 1 / -1;   /* Rubriken över båda kolumnerna (Kantlinjer för) */
 }
 
 #om-oss p {
-  grid-column: 1;        /* Båda styckena i kolumn 1 (en i taget)*/
+  /* Original */
+  /* grid-column: 1; */        /* Båda styckena i kolumn 1 (en i taget)*/
+
+  /* Swap */
+  grid-column: 2;
 }
 
 #om-oss img {
-  grid-column: 2;        /* Bilden i kolumn 2 */
-  grid-row: 2 / 4;       /* och från radlinje2 till 4 */  
+  /* Original */
+  /* grid-column: 2; */        /* Bilden i kolumn 2 */
+  /* grid-row: 2 / 4; */       /* och från radlinje2 till 4 */  
+
+  /* Swap */
+  grid-column: 1;
+  grid-row: 2 / 4;
 }
 
