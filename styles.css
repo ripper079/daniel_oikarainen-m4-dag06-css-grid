@@ -48,6 +48,8 @@ article {
   border-radius: 8px;
   padding: 16px;
 
+  /* Denna är en dimensionell och ska lägga till i vertikal led, ett element i taget */
+  /* Brs stuktur som fungerar på ett kort, titel, bild, beskrivande text osv... */
   display: flex;
   flex-direction: column;
 }
@@ -60,6 +62,9 @@ article img,
 }
 
 .knapp {
+  /* Man vill ha lite av både :D.FLEXIBILITET*/
+  /* Vanligtvis är knappar inline, men man kan inte då */
+  /* Ändra storlek och den har begränsningar vad gäller padding */
   display: inline-block;
   background-color: #8c1010;
   color: #ffffff;
@@ -162,12 +167,15 @@ textarea:focus-visible {
 }
 
 label {
+  /* I detta fall är label en inline, men du vill ha en ny rad. Bara göra om den till block */
+  /* Som tar en hel rad i anspråk */
   display: block;
   font-weight: 600;
   margin-bottom: 4px;
 }
 
 .val label {
+/* För att motverka det du gjorde på ovanståden css block */
   display: inline;
   font-weight: 400;
   margin-left: 8px;
@@ -201,6 +209,14 @@ legend {
 
 /* ===== Dag 5: Flexbox ===== */
 header {
+  /* Oftast vill man ha layouten:  */
+  /* Vänster sidn ngt, mitten ngt och höger något. 3 sektioner. Stor fördel med flexbox här är */
+  /* att det är relativt lägg att lägga till nya ting tex navigationslänkar, bilder, icon med */
+  /* samtidgt som den ser "rak" ut. */
+
+  /* Vänster = Loga eller titel. */
+  /* Mitten  = Navigations länkar. */
+  /* Höger = Här brukar oftast finnas Logga in knapp,🍔, kundvagn... */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -213,11 +229,20 @@ header h1 {
 }
 
 nav ul {
+  /* Flexbox PERFEKT för denna tillämpling */
+  /* A breeze lägga till nya länker */
+  /* Justerar automatiskt fint så att hela länk sektionen */
+  /* positions rak */
+  /* Givetvis finns en begränsning HUR mänga länkar man kan ha */
   display: flex;
   gap: 20px;
 }
 
 footer {
+  /* För 2 flex item är den perfekt */
+  /* Trycker ut dom både så långtttt det går åt sidan */
+  /* och wrappen gör den responsiv */
+  /* där man justerar brytpunkten med gap */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -230,6 +255,8 @@ article .pris {
 }
 
 .meny-lista {
+  /* Responsivt! Alla kort lika stora.*/
+  /* Flexbox är lite begränsat här eftersom svårt bevara samma storlek på korten */
   display: grid;
 
   /* Mer responsivt. Alla kort behåller rätt storlek */
@@ -238,6 +265,10 @@ article .pris {
 }
 
 #om-oss {
+  /* Jag tycker layouten...är sisådär. Uppför sig inte jätte bra responsivt */
+  /* Men rent strukturellt är den perfekt. */
+  /* Tydligt indelande sektioner. Lite Linux vibbar här */
+  /* Hade nog blivit lite bättre omman lagt till en media query också */
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
