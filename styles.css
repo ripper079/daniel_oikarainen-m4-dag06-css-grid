@@ -47,7 +47,7 @@ article {
   border: 1px solid #e3d5c3;
   border-radius: 8px;
   padding: 16px;
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
 }
 
 article img,
@@ -229,4 +229,11 @@ article {
 
 article .pris {
   margin-top: auto;
+}
+
+.meny-lista {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
 }
