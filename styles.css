@@ -47,7 +47,9 @@ article {
   border: 1px solid #e3d5c3;
   border-radius: 8px;
   padding: 16px;
-  /* margin-bottom: 16px; */
+
+  display: flex;
+  flex-direction: column;
 }
 
 article img,
@@ -222,10 +224,6 @@ footer {
   gap: 16px;
 }
 
-article {
-  display: flex;
-  flex-direction: column;
-}
 
 article .pris {
   margin-top: auto;
