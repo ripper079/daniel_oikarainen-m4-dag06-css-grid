@@ -270,6 +270,7 @@ article .pris {
   /* Tydligt indelande sektioner. Lite Linux vibbar här */
   /* Hade nog blivit lite bättre omman lagt till en media query också */
   display: grid;
+  gap: 20px;
   grid-template-columns: 1fr 1fr;
 }
 
